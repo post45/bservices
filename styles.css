@@ -9,8 +9,8 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0px 20px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
 }
@@ -21,14 +21,44 @@ header {
 }
 
 .social-media a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
   text-decoration: none;
   color: #333;
   font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.social-media a i {
+  position: relative;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.social-media a:hover {
+  transform: translateY(-2px);
+}
+
+.social-media a:hover i {
+  transform: rotateY(360deg);
 }
 
 .logo {
   text-align: center;
-  flex-grow: 1;
+}
+
+.social-media {
+  justify-self: start;
+}
+
+.contact-info {
+  justify-self: end;
 }
 
 .logo img {
@@ -58,6 +88,32 @@ nav a {
   margin: 0 20px;
   font-weight: 600;
   font-size: 18px;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #005243;
+  opacity: 0.8;
+}
+
+.logo a,
+.contact-info a {
+  text-decoration: none;
+  color: #005243;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.logo a:hover,
+.logo a:focus,
+.contact-info a:hover,
+.contact-info a:focus {
+  color: #005243;
+  opacity: 0.8;
+  text-decoration: underline;
+  text-decoration-color: #ffe680;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
 }
 
 .magic-line {
@@ -72,6 +128,146 @@ nav a {
   opacity: 0;
   transition: transform 0.25s ease, width 0.25s ease, opacity 0.2s ease;
   pointer-events: none;
+}
+
+.service-page {
+  background-color: #f4f1ee;
+  padding: 60px 20px;
+}
+
+.service-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-hero h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin: 10px 0 40px;
+}
+
+.service-hero-tagline {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+  color: #333;
+  text-decoration: none;
+  margin: 0 0 12px;
+}
+
+.service-hero-tagline-phone {
+  text-decoration: none;
+  color: inherit;
+}
+
+.service-hero-tagline-phone:hover,
+.service-hero-tagline-phone:focus {
+  text-decoration: underline;
+  text-decoration-color: #ffe680;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+.service-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 520px;
+}
+
+.service-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+.service-image {
+  flex: 0 0 520px;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+}
+
+.service-section {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.service-section h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin: 40px 0 24px;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-mini-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.service-mini-card .check {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe680;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-mini-card h3 {
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.service-mini-card p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+}
+
+.service-wide-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.service-wide-card h3 {
+  font-size: 20px;
+  margin: 0 0 12px;
+  color: #333;
 }
 
 .dropdown {
@@ -266,6 +462,37 @@ footer {
 
   .text p {
     font-size: 15px;
+  }
+
+  .service-hero h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .service-hero-tagline {
+    font-size: 28px;
+  }
+
+  .service-hero-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .service-card {
+    max-width: 100%;
+  }
+
+  .service-image {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .service-section h2 {
+    font-size: 24px;
+  }
+
+  .service-cards {
+    grid-template-columns: 1fr;
   }
 
   .hero {
