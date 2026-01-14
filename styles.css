@@ -53,6 +53,16 @@ header {
   text-align: center;
 }
 
+.logo {
+  position: relative;
+}
+
+.logo a {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+}
+
 .social-media {
   justify-self: start;
 }
@@ -200,6 +210,13 @@ nav a:focus {
   height: auto;
   border-radius: 24px;
   display: block;
+}
+
+.service-image.placeholder {
+  height: 320px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #e8e3dc, #f7f4f0);
+  border: 2px dashed rgba(0, 0, 0, 0.08);
 }
 
 .service-section {
