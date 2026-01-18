@@ -114,16 +114,101 @@
         <a class="dropbtn" style="color: #005243" href="prices.html">PRICES</a>
         <div class="dropdown-content">
           <a style="color: #005243" href="financing.html">FINANCING</a>
+          <a style="color: #005243" href="discounts.html">DISCOUNTS</a>
         </div>
       </div>
       <a style="color: #005243" href="contact.html">CONTACT</a>
       <a style="color: #005243" href="rebaits.html">REBAITS</a>
     </nav>
 
-    <main class="section" style="max-width: 1200px; margin: 40px auto">
-      <div class="text">
-        <h1>PRICES</h1>
-        <p>Content coming soon.</p>
+    <main
+      id="prices-content"
+      style="
+        margin: 40px 0;
+        box-sizing: border-box;
+      ">
+      <div class="text" style="font-size: 18px; max-width: 100%;">
+        <h1 style="font-size: 18px; font-weight: 600; color: #005243">
+          Beeline Services Pricing Philosophy
+        </h1>
+        <p>
+          At Beeline Services, we believe pricing should be clear, fair, and
+          built on trust-not guesswork or hidden fees. Every home and every
+          project is different, which is why we never use one-size-fits-all
+          pricing.
+        </p>
+
+        <h2 style="margin-top: 24px; font-size: 18px; font-weight: 600;">
+          Fair Market Pricing - Always
+        </h2>
+        <p>
+          Our prices are based on current market rates, real labor time, quality
+          materials, and the exact scope of work required. We do not inflate
+          prices, and we do not cut corners. You pay for professional
+          workmanship, licensed expertise, and results done right the first
+          time.
+        </p>
+
+        <h2 style="margin-top: 24px; font-size: 18px; font-weight: 600;">
+          Free Estimates - Always Inside
+        </h2>
+        <p>
+          We provide free in-person estimates so we can properly evaluate the
+          situation, answer your questions, and give you an accurate price. No
+          pressure, no obligation, and no surprises. We believe an honest
+          estimate starts with seeing the job firsthand.
+        </p>
+
+        <h2 style="margin-top: 24px; font-size: 18px; font-weight: 600;">
+          Every Job Is Unique
+        </h2>
+        <p>Pricing depends on:</p>
+        <ul style="margin: 0 0 16px 20px;">
+          <li>The scope and complexity of the work</li>
+          <li>Access and existing conditions</li>
+          <li>Materials required</li>
+          <li>Code requirements and safety considerations</li>
+        </ul>
+        <p>
+          Because of this, each estimate is customized to your specific needs.
+          You only pay for what your project truly requires.
+        </p>
+
+        <h2 style="margin-top: 24px; font-size: 18px; font-weight: 600;">
+          A Handshake You Can Trust
+        </h2>
+        <p>We still believe in old-school values.</p>
+        <p>When we give you a price and agree on the work, we stand by it.</p>
+        <p>A handshake with Beeline Services means:</p>
+        <ul style="margin: 0 0 16px 20px;">
+          <li>The price we quote is the price we honor</li>
+          <li>The work we promise is the work we deliver</li>
+          <li>The quality we discuss is the quality you receive</li>
+        </ul>
+
+        <h2 style="margin-top: 24px; font-size: 18px; font-weight: 600;">
+          Quality Over Shortcuts
+        </h2>
+        <p>
+          We focus on long-term solutions, not temporary fixes. Our team uses
+          proven methods, quality materials, and industry best practices to
+          ensure durability, safety, and peace of mind.
+        </p>
+
+        <h2 style="margin-top: 24px; font-size: 18px; font-weight: 600;">
+          Customer-First Service
+        </h2>
+        <p>At Beeline Services, our reputation is built on:</p>
+        <ul style="margin: 0 0 16px 20px;">
+          <li>Honest communication</li>
+          <li>Respect for your home</li>
+          <li>Clean, professional work</li>
+          <li>Doing the job right - every time</li>
+        </ul>
+        <p>
+          We value our customers, and we take pride in work that speaks for
+          itself.
+        </p>
       </div>
     </main>
   <footer
@@ -244,6 +329,22 @@
 
           moveLineTo(activeLink);
 
+          const pricesContent = document.getElementById("prices-content");
+          const updatePricesContentWidth = () => {
+            if (!pricesContent || links.length < 2) return;
+            if (window.innerWidth <= 768) {
+              const viewportWidth = document.documentElement.clientWidth;
+              pricesContent.style.width = `${Math.max(0, viewportWidth - 40)}px`;
+              pricesContent.style.marginLeft = "20px";
+              return;
+            }
+            const firstRect = links[0].getBoundingClientRect();
+            const lastRect = links[links.length - 1].getBoundingClientRect();
+            const width = Math.max(0, lastRect.right - firstRect.left);
+            pricesContent.style.width = `${width}px`;
+            pricesContent.style.marginLeft = `${firstRect.left}px`;
+          };
+
           links.forEach((link) => {
             link.addEventListener("mouseenter", () => moveLineTo(link));
             link.addEventListener("focus", () => moveLineTo(link));
@@ -251,7 +352,12 @@
 
           nav.addEventListener("mouseleave", () => moveLineTo(activeLink));
 
-          window.addEventListener("resize", () => moveLineTo(activeLink));
+          window.addEventListener("resize", () => {
+            moveLineTo(activeLink);
+            updatePricesContentWidth();
+          });
+
+          updatePricesContentWidth();
         });
       });
     </script>
