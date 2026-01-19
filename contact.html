@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
-  <body>
+  <body class="contact-page">
     <header>
       <div class="social-media">
         <a
@@ -74,6 +74,7 @@
         <a style="color: #005243" href="plumbing/Commercial Plumbing services.html">COMMERCIAL PLUMBING SERVICES</a>
         </div>
       </div>
+      <a style="color: #005243" href="electrical/Knob & Tube Wiring Replacement.html">KNOB & TUBE WIRING REPLACEMENT</a>
       <div class="dropdown">
         <a class="dropbtn" style="color: #005243" href="electrical.html">ELECTRICAL</a>
         <div class="dropdown-content">
@@ -121,145 +122,104 @@
       <a style="color: #005243" href="rebaits.html">REBAITS</a>
     </nav>
 
-    <main style="max-width: 700px; margin: 40px auto; padding: 20px">
-      <h1 style="text-align: center; font-weight: 600">Contact Us</h1>
-
-      <form
-        id="contact-form"
-        action="https://formsubmit.co/beelinservices@gmail.com"
-        method="POST"
-        enctype="multipart/form-data"
-        style="display: flex; flex-direction: column; gap: 20px">
-        <!-- Formsubmit hidden fields -->
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Contact Form Submission - Beeline Services" />
-        <input type="hidden" name="_captcha" value="false" />
-
-        <div>
-          <label for="name" style="font-weight: 600">Name*</label><br />
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            style="
-              width: 100%;
-              padding: 10px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-            " />
+    <main class="knob-page">
+      <section class="knob-section knob-contact">
+        <h2>Get In Touch</h2>
+        <p>Need expert service in San Jose and surrounding areas? Get in touch today.</p>
+        <div class="knob-contact-card">
+          <form class="knob-contact-form" 
+            action="https://formsubmit.co/beelinservices@gmail.com"
+            method="POST"
+            enctype="multipart/form-data">
+            <input
+              type="hidden"
+              name="_subject"
+              value="Website Contact Form - Beeline Services" />
+            <input type="hidden" name="_captcha" value="false" />
+            <div class="knob-form-grid">
+              <div class="knob-form-field">
+                <label for="knob-name">Your name</label>
+                <input
+                  id="knob-name"
+                  name="name"
+                  type="text"
+                  placeholder="Alec"
+                  required />
+              </div>
+              <div class="knob-form-field">
+                <label for="knob-phone">Cell phone</label>
+                <input
+                  id="knob-phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="+1 (408) 000-0000"
+                  required />
+              </div>
+              <div class="knob-form-field">
+                <label for="knob-email">Email address</label>
+                <input
+                  id="knob-email"
+                  name="email"
+                  type="email"
+                  placeholder="email@address.com"
+                  required />
+              </div>
+              <div class="knob-form-field">
+                <label for="knob-venue">Venue</label>
+                <input
+                  id="knob-venue"
+                  name="venue"
+                  type="text"
+                  placeholder="5 Pine St" />
+              </div>
+              <div class="knob-form-field knob-form-full">
+                <label for="knob-message">Message</label>
+                <textarea
+                  id="knob-message"
+                  name="message"
+                  rows="4"
+                  placeholder="Tell us about your needs or ask a question..."
+                  required></textarea>
+              </div>
+            </div>
+            <button type="submit">Get A Free Estimate</button>
+            <p class="knob-form-disclaimer">
+              *By clicking this you are giving Beeline Services the
+              authorization to contact you via SMS or phone call.
+            </p>
+          </form>
+          <div class="knob-contact-info">
+            <p>Beeline Services</p>
+            <p>
+              <a href="tel:+14083945855">(408) 394-5855</a>
+            </p>
+            <p>
+              <a href="mailto:info@beelineservices.org">info@beelineservices.org</a>
+            </p>
+            <p>Serving San Jose and surrounding areas.</p>
+          </div>
         </div>
-        <div>
-          <label for="email" style="font-weight: 600">Email*</label><br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            style="
-              width: 100%;
-              padding: 10px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-            " />
-        </div>
-        <div>
-          <label for="phone" style="font-weight: 600">Phone*</label><br />
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-            style="
-              width: 100%;
-              padding: 10px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-            " />
-        </div>
-        <div>
-          <label for="message" style="font-weight: 600">Message*</label><br />
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-            style="
-              width: 100%;
-              padding: 10px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-            "></textarea>
-        </div>
-        <div>
-          <label
-            for="file-upload"
-            style="
-              cursor: pointer;
-              color: #005243;
-              font-weight: 600;
-              display: inline-block;
-            ">
-            <i class="fa fa-paperclip" style="margin-right: 8px"></i>Attach File
-          </label>
-          <input
-            type="file"
-            id="file-upload"
-            name="attachment"
-            style="display: none" />
-        </div>
-        <button
-          type="submit"
-          id="contact-submit"
-          style="
-            padding: 8px 16px;
-            background-color: #005243;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 14px;
-            display: inline-block;
-            width: auto;
-          ">
-          Send
-        </button>
-
         <div
-          id="form-message"
-          style="margin-top: 20px; font-weight: 600; color: #005243">
-          <!-- Optional: Your message was sent successfully -->
+          class="knob-form-popup"
+          role="alert"
+          aria-live="polite"
+          style="
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            background: #ffe680;
+            color: #333;
+            padding: 14px 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+            font-weight: 600;
+            display: none;
+            z-index: 999;
+          "
+        >
+          Message sent successfully.
         </div>
-      </form>
-      <div
-        id="form-popup"
-        role="alert"
-        aria-live="polite"
-        style="
-          position: fixed;
-          top: 24px;
-          right: 24px;
-          background: #005243;
-          color: #fff;
-          padding: 14px 18px;
-          border-radius: 12px;
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
-          font-weight: 600;
-          display: none;
-          z-index: 999;
-        ">
-        Message sent successfully.
-      </div>
-
-      <div style="margin-top: 40px; text-align: center">
-        <h2 style="font-weight: 600">Ready to Discuss Your Project?</h2>
-        <p style="font-size: 16px; margin-top: 10px">
-          Reach out today for a free consultation. We're happy to answer
-          questions and help make your project a reality.
-        </p>
-      </div>
+      </section>
     </main>
 
     <script>
@@ -307,10 +267,11 @@
       });
     </script>
 
-    <footer
+    
+      <footer
       style="
         font-family: 'Open Sans', sans-serif;
-        background-color: #fff;
+        background-color: #ffffff;
         color: #005243;
         position: relative;
         padding: 0 0 30px;
@@ -379,7 +340,7 @@
       </div>
       <hr style="border: none; border-top: 2px solid #ffc30b; margin: 24px 0 0; width: 100%;" />
       <p style="margin: 20px 0 0; font-size: 14px;">
-        Copyright &copy; 2025 Beeline Services. All rights reserved.
+        Copyright &copy; 2026 Beeline Services. All rights reserved.
       </p>
     </footer>
       <script id="magic-line-nav">
@@ -436,5 +397,51 @@
         });
       });
     </script>
-  </body>
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".knob-contact-form").forEach((form) => {
+          const submit = form.querySelector("button[type='submit']");
+          const popup = form.closest(".knob-contact").querySelector(".knob-form-popup");
+          if (!submit || !popup) return;
+
+          form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            submit.disabled = true;
+            const originalText = submit.textContent;
+            submit.textContent = "Sending...";
+
+            try {
+              const formData = new FormData(form);
+              const response = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                  Accept: "application/json",
+                },
+              });
+
+              if (response.ok) {
+                popup.textContent = "Message sent successfully.";
+                popup.style.display = "block";
+                form.reset();
+                setTimeout(() => {
+                  popup.style.display = "none";
+                }, 4000);
+              } else {
+                popup.textContent = "Sorry, something went wrong.";
+                popup.style.display = "block";
+              }
+            } catch (error) {
+              popup.textContent = "Sorry, something went wrong.";
+              popup.style.display = "block";
+            } finally {
+              submit.disabled = false;
+              submit.textContent = originalText;
+            }
+          });
+        });
+      });
+    </script>
+</body>
 </html>
