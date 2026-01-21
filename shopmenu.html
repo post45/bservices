@@ -2,15 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BEELINE SERVICES - ELECTRICAL</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop Menu - Beeline Services</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #ffe680;
+        color: #222;
+      }
+      header,
+      nav {
+        background-color: #ffffff;
+        color: white;
+        padding: 1rem 2rem;
+      }
+      header h1 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      main {
+        padding: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      h2 {
+        font-weight: 700;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 0.25rem;
+        margin-top: 2rem;
+      }
+      ul.category-list,
+      ul.subcategory-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0.5rem 0 2rem 0;
+      }
+      ul.subcategory-list {
+        padding-left: 1rem;
+      }
+      ul.category-list li,
+      ul.subcategory-list li {
+        margin-bottom: 0.5rem;
+      }
+      a.menu-link {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a.menu-link:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: 768px) {
+        header,
+        nav {
+          padding: 1rem;
+        }
+        nav ul {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        main {
+          padding: 1.25rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -122,254 +195,107 @@
       <a style="color: #005243" href="rebaits">REBAITS</a>
     </nav>
 
-    <main class="plumbing-page">
-      <section class="plumbing-section">
-        <div class="plumbing-hero">
-          <div class="plumbing-hero-card">
-            <h1>Certified Electrical Services with a Local Touch</h1>
-            <p>
-              Beeline Services provides safe, code-compliant electrical work for
-              homes and businesses across San Jose and surrounding areas. We
-              focus on clear communication, clean workmanship, and reliable
-              results.
-            </p>
-            <p>
-              From small repairs to full system upgrades, we tailor every
-              solution to your property and goals.
-            </p>
-            <ul class="plumbing-hero-list">
-              <li>Panel upgrades and replacements</li>
-              <li>EV charger installation</li>
-              <li>Lighting and recessed upgrades</li>
-              <li>Wiring installation and repair</li>
-              <li>Surge protection</li>
-              <li>Ceiling fan installation</li>
-              <li>Backup power and generators</li>
-              <li>Commercial electrical services</li>
-            </ul>
-            <div class="plumbing-hero-cta">
-              <a href="contact">Learn More</a>
-            </div>
-          </div>
-          <div class="plumbing-hero-image">
-            <img
-              src="img/electrical/ElectricalPanelReplacementUpgrade.jpg"
-              alt="Electrical panel upgrade" />
-          </div>
-        </div>
+    <main>
+      <h2>Shop Categories</h2>
+
+      <section>
+        <h3>Furniture</h3>
+        <ul class="category-list">
+          <li>
+            <a href="/collections/living-room" class="menu-link"
+              >Living Room Furniture</a
+            >
+          </li>
+          <li>
+            <a href="/collections/bedroom" class="menu-link"
+              >Bedroom Furniture</a
+            >
+          </li>
+          <li>
+            <a href="/collections/dining-room" class="menu-link"
+              >Dining Room Furniture</a
+            >
+          </li>
+          <li>
+            <a href="/collections/office" class="menu-link">Office Furniture</a>
+          </li>
+          <li>
+            <a href="/collections/kids" class="menu-link">Kids Furniture</a>
+          </li>
+        </ul>
       </section>
 
-      <section class="plumbing-process">
-        <h2>How It Works</h2>
-        <div class="process-grid">
-          <div class="process-card">
-            <div class="process-icon">1</div>
-            <h3>Explore Services</h3>
-            <p>
-              Review our residential and commercial electrical services to find
-              the best fit for your project.
-            </p>
-          </div>
-          <div class="process-card">
-            <div class="process-icon">2</div>
-            <h3>Choose the Right Service</h3>
-            <p>
-              Tell us about your electrical needs so we can recommend the
-              safest solution.
-            </p>
-          </div>
-          <div class="process-card">
-            <div class="process-icon">3</div>
-            <h3>Get a Clear Quote</h3>
-            <p>
-              We evaluate the job and provide an upfront estimate before any
-              work begins.
-            </p>
-          </div>
-          <div class="process-card">
-            <div class="process-icon">4</div>
-            <h3>Enjoy Professional Service</h3>
-            <p>
-              Licensed electricians complete the work neatly and leave your
-              space clean.
-            </p>
-          </div>
-        </div>
+      <section>
+        <h3>Lighting</h3>
+        <ul class="category-list">
+          <li>
+            <a href="/collections/ceiling" class="menu-link"
+              >Ceiling Lighting</a
+            >
+          </li>
+          <li>
+            <a href="/collections/table" class="menu-link">Table Lighting</a>
+          </li>
+          <li>
+            <a href="/collections/floor" class="menu-link">Floor Lighting</a>
+          </li>
+          <li>
+            <a href="/collections/wall" class="menu-link">Wall Lighting</a>
+          </li>
+          <li>
+            <a href="/collections/outdoor" class="menu-link"
+              >Outdoor Lighting</a
+            >
+          </li>
+        </ul>
       </section>
 
-      <section class="plumbing-section plumbing-premium">
-        <h2>Our Premium Services</h2>
-        <p>
-          Beeline Services delivers full-service electrical work backed by local
-          expertise, licensed professionals, and dependable results.
-        </p>
-        <div class="premium-grid">
-          <div class="premium-card">
-            <h3>Residential Electrical in San Jose</h3>
-            <p>Safe, efficient upgrades for every home.</p>
-            <ul>
-              <li>Panel upgrades and replacements</li>
-              <li>Lighting and recessed upgrades</li>
-              <li>EV charger installation</li>
-              <li>Ceiling fan installation</li>
-            </ul>
-          </div>
-          <div class="premium-card">
-            <h3>Commercial Electrical Services</h3>
-            <p>Reliable service for offices, retail, and facilities.</p>
-            <ul>
-              <li>Electrical maintenance and troubleshooting</li>
-              <li>Power upgrades and distribution</li>
-              <li>Backup power and generators</li>
-              <li>Code compliance improvements</li>
-            </ul>
-          </div>
-          <div class="premium-card">
-            <h3>Emergency Electrical Repairs</h3>
-            <p>Fast response for urgent electrical issues.</p>
-            <ul>
-              <li>Same-day availability</li>
-              <li>Safety-first diagnostics</li>
-              <li>Clear scope and communication</li>
-            </ul>
-          </div>
-        </div>
+      <section>
+        <h3>Decor</h3>
+        <ul class="category-list">
+          <li><a href="/collections/rugs" class="menu-link">Rugs</a></li>
+          <li><a href="/collections/art" class="menu-link">Art</a></li>
+          <li><a href="/collections/mirrors" class="menu-link">Mirrors</a></li>
+          <li><a href="/collections/vases" class="menu-link">Vases</a></li>
+          <li>
+            <a href="/collections/decorative-objects" class="menu-link"
+              >Decorative Objects</a
+            >
+          </li>
+          <li>
+            <a href="/collections/candles" class="menu-link"
+              >Candles + Holders</a
+            >
+          </li>
+        </ul>
       </section>
 
-      <section class="plumbing-section">
-        <h2 style="text-align: center; margin-bottom: 10px;">
-          Electrical Services We Specialize In
-        </h2>
-        <p style="text-align: center; margin: 0 auto 24px; max-width: 720px;">
-          From upgrades to new installs, our electricians handle projects of
-          every size across San Jose and surrounding areas.
-        </p>
-        <div class="service-grid">
-          <div class="service-card-compact">
-            <img
-              src="img/electrical/ElectricVehicleEVChargerInstallation.jpg"
-              alt="EV charger installation" />
-            <h4>EV Charger Installation</h4>
-            <p>Safe, dedicated charging setups for your home.</p>
-          </div>
-          <div class="service-card-compact">
-            <img
-              src="img/electrical/ElectricalWiringInstallationRepair.jpg"
-              alt="Electrical wiring repair" />
-            <h4>Wiring Installation &amp; Repair</h4>
-            <p>Modern wiring solutions for safety and performance.</p>
-          </div>
-          <div class="service-card-compact">
-            <img
-              src="img/electrical/SurgeProtectionInstallation.jpeg"
-              alt="Surge protection" />
-            <h4>Surge Protection</h4>
-            <p>Protect electronics and appliances from power spikes.</p>
-          </div>
-          <div class="service-card-compact">
-            <img
-              src="img/electrical/CeilingFanInstallation.jpg"
-              alt="Ceiling fan installation" />
-            <h4>Ceiling Fan Installation</h4>
-            <p>Improve airflow with clean, code-compliant installs.</p>
-          </div>
-          <div class="service-card-compact">
-            <img
-              src="img/electrical/LightingRecessedLightingUpgradeInstallation.jpg"
-              alt="Lighting upgrade" />
-            <h4>Lighting Upgrades</h4>
-            <p>Modern lighting to elevate safety and style.</p>
-          </div>
-          <div class="service-card-compact">
-            <img
-              src="img/electrical/ElectricalPanelReplacementUpgrade.jpg"
-              alt="Electrical panel upgrade" />
-            <h4>Panel Replacement</h4>
-            <p>Increase capacity for today’s electrical demands.</p>
-          </div>
-          <div class="service-card-compact">
-            <img
-              src="img/electrical/SolarPowerandWallBatteryInstallation.jpg"
-              alt="Solar power installation" />
-            <h4>Solar &amp; Wall Battery</h4>
-            <p>Prepare for energy independence and backup power.</p>
-          </div>
-          <div class="service-card-compact">
-            <img
-              src="img/electrical/BackupEnergySystemsandGeneratorIstallation.jpg"
-              alt="Backup generator installation" />
-            <h4>Backup Generators</h4>
-            <p>Keep power on during outages with reliable systems.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="plumbing-section">
-        <h2 style="text-align: center; margin-bottom: 20px;">
-          Why Choose Beeline Services?
-        </h2>
-        <div class="choose-grid">
-          <div class="choose-card">
-            <div class="choose-icon">✓</div>
-            <h4>Licensed Electricians</h4>
-            <p>Qualified professionals who follow local safety codes.</p>
-          </div>
-          <div class="choose-card">
-            <div class="choose-icon">✓</div>
-            <h4>Customer-Focused Service</h4>
-            <p>Clear communication and respect for your property.</p>
-          </div>
-          <div class="choose-card">
-            <div class="choose-icon">✓</div>
-            <h4>Local Expertise</h4>
-            <p>We understand local requirements and common issues.</p>
-          </div>
-          <div class="choose-card">
-            <div class="choose-icon">✓</div>
-            <h4>24/7 Support</h4>
-            <p>Emergency response when you need help fast.</p>
-          </div>
-          <div class="choose-card">
-            <div class="choose-icon">✓</div>
-            <h4>Complete Solutions</h4>
-            <p>From upgrades to new installs, we handle it all.</p>
-          </div>
-          <div class="choose-card">
-            <div class="choose-icon">✓</div>
-            <h4>Energy-Smart Options</h4>
-            <p>Efficient systems designed to save energy and cost.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="plumbing-section">
-        <div class="plumbing-team">
-          <img
-            src="img/electrical/CommercialElectricalServices.jpg"
-            alt="Beeline Services electrical team" />
-          <div>
-            <h3>We Are the Electricians</h3>
-            <p>
-              Beeline Services delivers expert electrical work across San Jose
-              and surrounding areas. We arrive on time, communicate clearly,
-              and stand behind every project.
-            </p>
-            <p>
-              Call today to schedule a visit and get reliable electrical
-              solutions from a trusted team.
-            </p>
-            <div class="plumbing-team-actions">
-              <a class="primary" href="contact">Contact Us</a>
-              <a class="secondary" href="tel:+14083945855">Call Now</a>
-            </div>
-          </div>
-        </div>
+      <section>
+        <h3>Outdoor</h3>
+        <ul class="category-list">
+          <li>
+            <a href="/collections/outdoor-furniture" class="menu-link"
+              >Outdoor Furniture</a
+            >
+          </li>
+          <li>
+            <a href="/collections/outdoor-accessories" class="menu-link"
+              >Outdoor Accessories</a
+            >
+          </li>
+          <li>
+            <a href="/collections/outdoor-dining" class="menu-link"
+              >Outdoor Dining</a
+            >
+          </li>
+        </ul>
       </section>
     </main>
-  
+
+    
       <section class="knob-section knob-contact">
         <h2>Get In Touch</h2>
-        <p>Need electrical help in San Jose and surrounding areas? Get in touch today.</p>
+        <p>Need expert service in San Jose and surrounding areas? Get in touch today.</p>
         <div class="knob-contact-card">
           <form class="knob-contact-form" 
             action="https://formsubmit.co/beelinservices@gmail.com"
