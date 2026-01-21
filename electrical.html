@@ -54,8 +54,15 @@
       </div>
     </header>
 
-    <nav>
-      <a style="color: #005243" href="index">HOME</a>
+    <nav class="site-nav">
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+<a style="color: #005243" href="index">HOME</a>
       <div class="dropdown">
         <a class="dropbtn" style="color: #005243" href="plumbing">PLUMBING</a>
         <div class="dropdown-content">
@@ -120,7 +127,8 @@
       </div>
       <a style="color: #005243" href="contact">CONTACT</a>
       <a style="color: #005243" href="rebaits">REBAITS</a>
-    </nav>
+      </div>
+</nav>
 
     <main class="plumbing-page">
       <section class="plumbing-section">
@@ -642,5 +650,47 @@
         });
       });
     </script>
+
+  <script id="mobile-nav">
+    document.addEventListener("DOMContentLoaded", () => {
+      const nav = document.querySelector(".site-nav");
+      if (!nav) return;
+      const toggle = nav.querySelector(".nav-toggle");
+      if (!toggle) return;
+      const dropdowns = Array.from(nav.querySelectorAll(".dropdown"));
+
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        if (!isOpen) {
+          dropdowns.forEach((item) => item.classList.remove("open"));
+        }
+      });
+
+      dropdowns.forEach((item) => {
+        const trigger = item.querySelector(".dropbtn");
+        if (!trigger) return;
+        trigger.addEventListener("click", (event) => {
+          if (window.innerWidth > 768) return;
+          event.preventDefault();
+          const isOpen = item.classList.contains("open");
+          dropdowns.forEach((other) => other.classList.remove("open"));
+          if (!isOpen) {
+            item.classList.add("open");
+          }
+        });
+      });
+
+      nav.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            nav.classList.remove("open");
+            toggle.setAttribute("aria-expanded", "false");
+            dropdowns.forEach((item) => item.classList.remove("open"));
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

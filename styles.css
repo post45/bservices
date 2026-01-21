@@ -92,6 +92,39 @@ nav {
   border-bottom: none; /* Removed line from the nav */
 }
 
+.site-nav {
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffe680;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #005243;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 nav a {
   color: #333;
   text-decoration: none;
@@ -1190,6 +1223,22 @@ nav a:focus {
 
 .dropdown .dropbtn {
   display: inline-block;
+  position: relative;
+  padding-right: 18px;
+}
+
+.dropdown .dropbtn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #ffc30b;
+  transition: transform 0.2s ease;
 }
 
 .dropdown-content {
@@ -1311,28 +1360,75 @@ footer {
 
 @media (max-width: 768px) {
   header {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 10px;
   }
 
   .social-media,
   .contact-info {
     margin: 10px 0;
   }
-  nav {
+
+  .social-media {
+    order: 1;
+    justify-content: center;
+  }
+
+  .logo {
+    order: 2;
+  }
+
+  .contact-info {
+    order: 3;
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    margin: 0;
+  }
+
+  .site-nav {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    padding: 10px 20px;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .site-nav.open .nav-links {
+    display: flex;
   }
 
   nav a {
-    margin: 5px 0;
+    margin: 6px 0;
   }
 
   .dropdown-content {
     position: static;
     box-shadow: none;
     min-width: 0;
+    background: transparent;
+    padding: 4px 0 8px;
+    display: none;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  .dropdown.open .dropbtn::after {
+    transform: rotate(180deg);
   }
 
   .dropdown-content a {
