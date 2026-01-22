@@ -102,16 +102,21 @@
 
     <nav class="site-nav">
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav-toggle-wrap">
+        <button class="nav-toggle nav-open" type="button" aria-expanded="false" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button class="nav-toggle nav-close" type="button" aria-expanded="true" aria-label="Close menu">
+          ×
+        </button>
+      </div>
       <div class="nav-links">
 <a style="color: #005243" href="index">HOME</a>
       <div class="dropdown">
         <a class="dropbtn" style="color: #005243" href="plumbing">PLUMBING</a>
-        <div class="dropdown-content">
+        <div class="dropdown-content plumbing-dropdown">
         <a style="color: #005243" href="plumbing/SumpPumpInstallationRepair">SUMP PUMP INSTALLATION-REPAIR</a>
         <a style="color: #005243" href="plumbing/BackflowTestingandPrevention">BACKFLOW TESTING AND PREVENTION</a>
         <a style="color: #005243" href="plumbing/PipeRepairsandRepiping">PIPE REPAIRS AND REPIPING</a>
@@ -130,7 +135,7 @@
       <a style="color: #005243" href="electrical/KnobTubeWiringReplacement">KNOB & TUBE WIRING REPLACEMENT</a>
       <div class="dropdown">
         <a class="dropbtn" style="color: #005243" href="electrical">ELECTRICAL</a>
-        <div class="dropdown-content">
+        <div class="dropdown-content electrical-dropdown">
         <a style="color: #005243" href="electrical/ElectricVehicleEVChargerInstallation">ELECTRIC VEHICLE (EV) CHARGER INSTALLATION</a>
         <a style="color: #005243" href="electrical/CommercialElectricalServices">COMMERCIAL ELECTRICAL SERVICES</a>
         <a style="color: #005243" href="electrical/ElectricalPanelReplacementUpgrade">ELECTRICAL PANEL REPLACEMENT - UPGRADE</a>
@@ -149,7 +154,7 @@
       </div>
       <div class="dropdown">
         <a class="dropbtn" style="color: #005243" href="hvac">HVAC</a>
-        <div class="dropdown-content">
+        <div class="dropdown-content hvac-dropdown">
         <a style="color: #005243" href="hvac/HeatPumpInstallation">HEAT PUMP INSTALLATION</a>
         <a style="color: #005243" href="hvac/AirConditionerInstallation">AIR CONDITIONER INSTALLATION</a>
         <a style="color: #005243" href="hvac/FurnaceInstallation">FURNACE INSTALLATION</a>
@@ -166,7 +171,7 @@
       
       <div class="dropdown">
         <a class="dropbtn" style="color: #005243" href="prices">PRICES</a>
-        <div class="dropdown-content">
+        <div class="dropdown-content prices-dropdown">
           <a style="color: #005243" href="financing">FINANCING</a>
           <a style="color: #005243" href="discounts">DISCOUNTS</a>
         </div>
@@ -590,16 +595,29 @@
     document.addEventListener("DOMContentLoaded", () => {
       const nav = document.querySelector(".site-nav");
       if (!nav) return;
-      const toggle = nav.querySelector(".nav-toggle");
-      if (!toggle) return;
+      const openBtn = nav.querySelector(".nav-open");
+      const closeBtn = nav.querySelector(".nav-close");
       const dropdowns = Array.from(nav.querySelectorAll(".dropdown"));
 
-      toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-        if (!isOpen) {
+      const setOpen = (isOpen) => {
+        if (isOpen) {
+          nav.classList.add("open");
+          openBtn?.setAttribute("aria-expanded", "true");
+        } else {
+          nav.classList.remove("open");
+          openBtn?.setAttribute("aria-expanded", "false");
           dropdowns.forEach((item) => item.classList.remove("open"));
         }
+      };
+
+      openBtn?.addEventListener("click", (event) => {
+        event.stopPropagation();
+        setOpen(true);
+      });
+
+      closeBtn?.addEventListener("click", (event) => {
+        event.stopPropagation();
+        setOpen(false);
       });
 
       dropdowns.forEach((item) => {
@@ -608,6 +626,7 @@
         trigger.addEventListener("click", (event) => {
           if (window.innerWidth > 768) return;
           event.preventDefault();
+          event.stopPropagation();
           const isOpen = item.classList.contains("open");
           dropdowns.forEach((other) => other.classList.remove("open"));
           if (!isOpen) {
@@ -617,13 +636,21 @@
       });
 
       nav.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
-          if (window.innerWidth <= 768) {
-            nav.classList.remove("open");
-            toggle.setAttribute("aria-expanded", "false");
-            dropdowns.forEach((item) => item.classList.remove("open"));
+        link.addEventListener("click", (event) => {
+          if (window.innerWidth > 768) return;
+          if (link.classList.contains("dropbtn")) {
+            event.preventDefault();
+            return;
           }
+          setOpen(false);
         });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (window.innerWidth > 768) return;
+        if (!nav.classList.contains("open")) return;
+        if (nav.contains(event.target)) return;
+        setOpen(false);
       });
     });
   </script>
