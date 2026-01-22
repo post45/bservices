@@ -41,6 +41,13 @@ header {
   transform-style: preserve-3d;
 }
 
+.social-media a .tiktok-icon {
+  width: 24px;
+  height: 24px;
+  fill: #000000;
+  display: block;
+}
+
 .social-media a:hover {
   transform: translateY(-2px);
 }
