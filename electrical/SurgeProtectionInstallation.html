@@ -537,8 +537,14 @@
           event.preventDefault();
           event.stopPropagation();
           const isOpen = item.classList.contains("open");
-          dropdowns.forEach((other) => other.classList.remove("open"));
-          if (!isOpen) {
+          dropdowns.forEach((other) => {
+            if (other !== item) {
+              other.classList.remove("open");
+            }
+          });
+          if (isOpen) {
+            item.classList.remove("open");
+          } else {
             item.classList.add("open");
           }
         });
