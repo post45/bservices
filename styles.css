@@ -1301,9 +1301,11 @@ nav a:focus {
   background-color: #ffe680;
 }
 
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  display: block;
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
 }
 
 /* Hero section */
