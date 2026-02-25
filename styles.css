@@ -1167,6 +1167,7 @@ nav a:focus {
 }
 
 .knob-contact-form input,
+.knob-contact-form select,
 .knob-contact-form textarea {
   width: 100%;
   padding: 10px;

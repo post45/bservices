@@ -17,6 +17,18 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="PASTE_SEARCH_CONSOLE_VERIFICATION_TOKEN_HERE" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
   </head>
   <body>
     <header>
@@ -474,9 +486,35 @@
   
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        const webhookUrl = "PASTE_ZAPIER_WEBHOOK_URL_HERE";
+        const isWebhookConfigured =
+          webhookUrl && !webhookUrl.includes("PASTE_");
+
+        const sendLeadToWebhook = async (formData) => {
+          if (!isWebhookConfigured) return;
+          const lead = Object.fromEntries(formData.entries());
+          lead.page_url = window.location.href;
+          lead.page_path = window.location.pathname;
+          lead.submitted_at = new Date().toISOString();
+
+          try {
+            await fetch(webhookUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(lead),
+            });
+          } catch (error) {
+            console.warn("Webhook lead delivery failed", error);
+          }
+        };
+
         document.querySelectorAll(".knob-contact-form").forEach((form) => {
           const submit = form.querySelector("button[type='submit']");
-          const popup = form.closest(".knob-contact").querySelector(".knob-form-popup");
+          const popup = form
+            .closest(".knob-contact")
+            ?.querySelector(".knob-form-popup");
           if (!submit || !popup) return;
 
           form.addEventListener("submit", async (event) => {
@@ -498,6 +536,7 @@
               });
 
               if (response.ok) {
+                await sendLeadToWebhook(formData);
                 popup.textContent = "Message sent successfully.";
                 popup.style.display = "block";
                 form.reset();
