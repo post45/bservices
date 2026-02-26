@@ -1690,6 +1690,47 @@ footer {
   background: #ffffff;
 }
 
+.membership-promo {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.membership-card {
+  border: 1px solid #e7ecea;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 14px;
+}
+
+.membership-card h2,
+.membership-card h3 {
+  margin: 0 0 6px;
+  color: #12382f;
+}
+
+.membership-price {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #005243;
+}
+
+.membership-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.membership-card li {
+  margin-bottom: 6px;
+}
+
 .trust-section h2 {
   margin: 0;
 }
@@ -1826,9 +1867,19 @@ footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .membership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .trust-header {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .membership-grid {
+    grid-template-columns: 1fr;
   }
 }
 
