@@ -57,12 +57,16 @@ header {
   height: 24px;
   fill: #000000;
   display: block;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
 }
 
 .social-media a .google-social-icon {
   width: 24px;
   height: 24px;
   display: block;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
 }
 
 .social-media a:hover {
@@ -71,6 +75,38 @@ header {
 
 .social-media a:hover i {
   transform: rotateY(360deg);
+}
+
+.social-media a:hover .tiktok-icon,
+.social-media a:hover .google-social-icon {
+  transform: rotateY(360deg);
+}
+
+.hcp-floating-button-wrap {
+  position: fixed;
+  right: 20px;
+  bottom: 110px;
+  z-index: 999;
+}
+
+.hcp-floating-button.hcp-button {
+  border: none;
+  border-radius: 999px;
+  background: #ffc30b !important;
+  color: #333 !important;
+  padding: 14px 18px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+  min-width: 0;
+  line-height: 1;
+}
+
+.hcp-floating-button.hcp-button:hover,
+.hcp-floating-button.hcp-button:focus {
+  transform: translateY(-1px);
 }
 
 .logo {
@@ -1880,6 +1916,18 @@ footer {
 @media (max-width: 768px) {
   .membership-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hcp-floating-button-wrap {
+    right: 12px;
+    bottom: 96px;
+    left: auto;
+  }
+
+  .hcp-floating-button.hcp-button {
+    width: auto;
+    padding: 14px 18px;
+    min-width: 0;
   }
 }
 
