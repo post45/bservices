@@ -1797,6 +1797,9 @@ footer {
   .hero .image,
   .hero .hero-text {
     flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
   }
 
   .plumbing-section {
@@ -2263,6 +2266,10 @@ footer {
     bottom: 148px;
     padding: 14px 18px;
     text-align: center;
+  }
+
+  .knob-contact {
+    margin-bottom: 220px;
   }
 }
 
