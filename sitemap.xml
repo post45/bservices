@@ -2,337 +2,347 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://beelineservices.org/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/about</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://beelineservices.org/areas/atherton</loc>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://beelineservices.org/areas/campbell</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/areas/cupertino</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/areas/los-altos</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beelineservices.org/areas/los-altos-hills</loc>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/areas/los-gatos</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/areas/mountain-view</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/areas/palo-alto</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/areas/san-jose</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/areas/santa-clara</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/areas/saratoga</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/areas/sunnyvale</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/contact</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/customer-portal</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/discounts</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/240VInstallationforSaunaHotTub</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/247EmergencyElectricalServices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/BackupEnergySystemsandGeneratorIstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/CeilingFanInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/CommercialElectricalServices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/ElectricVehicleEVChargerInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/ElectricalPanelReplacementUpgrade</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/ElectricalWiringInstallationRepair</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/GastoElectricApplianceConversionServices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/KnobTubeWiringReplacement</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/LightingRecessedLightingUpgradeInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/SmokeDetectorInstallationServices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/SolarPowerandWallBatteryInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/SurgeProtectionInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/electrical/SwitchOutletinstallationReplacement</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/financing</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/AirConditionerInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/CommercialHVAC</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/DualfuelsysteminstallationFurnaceHeatPump</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/DuctlessMiniSplitInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/DuctworkInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/FurnaceInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/HeatPumpInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/HydronicSystem</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/RadiantHeating</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/RooftopPackageUnitInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/hvac/ZoningSystem</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/membership</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/BackflowTestingandPrevention</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/CommercialPlumbingservices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/DrainCleaningServices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/EmergencyBurstPipeRepair</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/EmergencyWaterHeaterRepair</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/HydroJettingServices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/LeakDetectionServices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/LeakRepairServices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/PipeRepairsandRepiping</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/SewerLineServices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/SumpPumpInstallationRepair</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/WaterHeaterInstallation</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/plumbing/WaterHeaterReplacement</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/portfolio</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/prices</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/privacypolicy</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/product</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/rebaits</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/services</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/shop</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://beelineservices.org/shopmenu</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <priority>0.5</priority>
   </url>
 </urlset>

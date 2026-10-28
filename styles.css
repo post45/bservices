@@ -254,19 +254,20 @@ nav a:focus {
 
 .service-hero h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 28px;
   color: #333;
   margin: 10px 0 40px;
 }
 
 .service-hero-tagline {
   display: block;
+  max-width: 820px;
+  margin: 0 auto 12px;
   text-align: center;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 28px;
   color: #333;
   text-decoration: none;
-  margin: 0 0 12px;
 }
 
 .service-hero-tagline-phone {
@@ -1729,12 +1730,12 @@ footer {
   }
 
   .service-hero h1 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 24px;
   }
 
   .service-hero-tagline {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .service-hero-content {
@@ -2184,7 +2185,7 @@ footer {
 .sticky-call-btn {
   position: fixed;
   right: 16px;
-  bottom: 16px;
+  bottom: 90px;
   z-index: 1000;
   display: inline-flex;
   align-items: center;
@@ -2251,7 +2252,7 @@ footer {
   .sticky-call-btn {
     left: 12px;
     right: 12px;
-    bottom: 12px;
+    bottom: 90px;
     padding: 16px 18px;
     text-align: center;
   }
@@ -2259,7 +2260,7 @@ footer {
   .sticky-financing-btn {
     left: 12px;
     right: 12px;
-    bottom: 70px;
+    bottom: 148px;
     padding: 14px 18px;
     text-align: center;
   }
