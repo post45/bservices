@@ -2188,7 +2188,7 @@ footer {
 .sticky-call-btn {
   position: fixed;
   right: 16px;
-  bottom: 90px;
+  bottom: 16px;
   z-index: 1000;
   display: inline-flex;
   align-items: center;
@@ -2255,7 +2255,7 @@ footer {
   .sticky-call-btn {
     left: 12px;
     right: 12px;
-    bottom: 90px;
+    bottom: 12px;
     padding: 16px 18px;
     text-align: center;
   }
@@ -2263,13 +2263,9 @@ footer {
   .sticky-financing-btn {
     left: 12px;
     right: 12px;
-    bottom: 148px;
+    bottom: 70px;
     padding: 14px 18px;
     text-align: center;
-  }
-
-  .knob-contact {
-    margin-bottom: 220px;
   }
 }
 
