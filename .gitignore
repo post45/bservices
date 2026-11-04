@@ -1,0 +1,8 @@
+# Raw job-site photo/video archives — large, unreviewed, and may include
+# customer-identifying content. Curated/compressed copies used on the site
+# live directly under img/plumbing, img/electrical, img/hvac, img/home, etc.
+img/*/projects/
+img/projects/
+
+# OS cruft
+.DS_Store

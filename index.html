@@ -335,11 +335,26 @@
         margin: auto;
       ">
       <!-- Smaller image on the left -->
+      <!--
+        EDITOR NOTE: To switch this to a hero video, drop a compressed clip at
+        img/home/hero-video.webm (and .mp4 fallback) and this will autoplay
+        automatically — no other code change needed. Until those files exist,
+        this silently falls back to the poster image below. See chat for the
+        exact ffmpeg compression command.
+      -->
       <div class="image" style="flex: 0 0 53%; max-width: 540px">
-        <img
-          src="img/plumbing/IMG_9618%20Large.jpeg"
-          alt="Beeline Services van on a plumbing job in the South Bay, CA"
-          style="width: 100%; max-height: 580px; object-fit: cover; border-radius: 10px" />
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="none"
+          poster="img/plumbing/IMG_9618%20Large.jpeg"
+          aria-label="Beeline Services van on a plumbing job in the South Bay, CA"
+          style="width: 100%; max-height: 580px; object-fit: cover; border-radius: 10px">
+          <source src="img/home/hero-video.webm" type="video/webm" />
+          <source src="img/home/hero-video.mp4" type="video/mp4" />
+        </video>
       </div>
 
       <!-- Text aligned to top right -->
@@ -507,10 +522,18 @@
     <!-- Row 1 -->
     <section class="section">
       <div class="image">
-        <img
-          src="img/plumbing/IMG_0679%20Large.jpeg"
-          alt="Beeline Services technicians repairing a water heater and furnace"
-          style="max-height: 400px; object-fit: cover" />
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="none"
+          poster="img/plumbing/IMG_0679%20Large.jpeg"
+          aria-label="Beeline Services technicians repairing a water heater"
+          style="max-height: 400px; width: 100%; object-fit: cover; border-radius: 10px">
+          <source src="img/home/plumbing-row-video.webm" type="video/webm" />
+          <source src="img/home/plumbing-row-video.mp4" type="video/mp4" />
+        </video>
       </div>
       <div class="text">
         <h2>Plumbing Repairs & Upgrades</h2>
@@ -526,10 +549,18 @@
     <!-- Row 2 -->
     <section class="section">
       <div class="image">
-        <img
-          src="img/electrical/beeline-panel-job-shirt.jpg"
-          alt="Beeline Services electrician working on an electrical panel"
-          style="max-height: 400px; object-fit: cover" />
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="none"
+          poster="img/electrical/beeline-panel-job-shirt.jpg"
+          aria-label="Beeline Services electrician installing an EV charger"
+          style="max-height: 400px; width: 100%; object-fit: cover; border-radius: 10px">
+          <source src="img/home/electrical-row-video.webm" type="video/webm" />
+          <source src="img/home/electrical-row-video.mp4" type="video/mp4" />
+        </video>
       </div>
       <div class="text">
         <h2>Electrical Safety & Performance</h2>
