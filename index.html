@@ -344,13 +344,18 @@
       -->
       <div class="image" style="flex: 0 0 53%; max-width: 540px">
         <video
+          id="hero-loop-video"
           autoplay
           muted
-          loop
           playsinline
           preload="none"
           poster="img/plumbing/IMG_9618%20Large.jpeg"
           aria-label="Beeline Services van on a plumbing job in the South Bay, CA"
+          data-playlist='[
+            {"webm":"img/home/hero-video-b.webm","mp4":"img/home/hero-video-b.mp4"},
+            {"webm":"img/home/hero-video-c.webm","mp4":"img/home/hero-video-c.mp4"},
+            {"webm":"img/home/hero-video-d.webm","mp4":"img/home/hero-video-d.mp4"}
+          ]'
           style="width: 100%; max-height: 580px; object-fit: cover; border-radius: 10px">
           <source src="img/home/hero-video.webm" type="video/webm" />
           <source src="img/home/hero-video.mp4" type="video/mp4" />
@@ -523,13 +528,18 @@
     <section class="section">
       <div class="image">
         <video
+          id="plumbing-row-loop-video"
           autoplay
           muted
-          loop
           playsinline
           preload="none"
           poster="img/plumbing/IMG_0679%20Large.jpeg"
           aria-label="Beeline Services technicians repairing a water heater"
+          data-playlist='[
+            {"webm":"img/home/plumbing-row-video-b.webm","mp4":"img/home/plumbing-row-video-b.mp4"},
+            {"webm":"img/home/plumbing-row-video-c.webm","mp4":"img/home/plumbing-row-video-c.mp4"},
+            {"webm":"img/home/plumbing-row-video-d.webm","mp4":"img/home/plumbing-row-video-d.mp4"}
+          ]'
           style="max-height: 400px; width: 100%; object-fit: cover; border-radius: 10px">
           <source src="img/home/plumbing-row-video.webm" type="video/webm" />
           <source src="img/home/plumbing-row-video.mp4" type="video/mp4" />
@@ -550,13 +560,17 @@
     <section class="section">
       <div class="image">
         <video
+          id="electrical-row-loop-video"
           autoplay
           muted
-          loop
           playsinline
           preload="none"
           poster="img/electrical/beeline-panel-job-shirt.jpg"
           aria-label="Beeline Services electrician installing an EV charger"
+          data-playlist='[
+            {"webm":"img/home/electrical-row-video-b.webm","mp4":"img/home/electrical-row-video-b.mp4"},
+            {"webm":"img/home/electrical-row-video-c.webm","mp4":"img/home/electrical-row-video-c.mp4"}
+          ]'
           style="max-height: 400px; width: 100%; object-fit: cover; border-radius: 10px">
           <source src="img/home/electrical-row-video.webm" type="video/webm" />
           <source src="img/home/electrical-row-video.mp4" type="video/mp4" />
@@ -576,10 +590,18 @@
     <!-- Row 3 -->
     <section class="section">
       <div class="image">
-        <img
-          src="hvac/beeline-hvac-job.jpg"
-          alt="Beeline Services HVAC heat pump installation"
-          style="max-height: 400px; object-fit: cover" />
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="none"
+          poster="hvac/beeline-hvac-job.jpg"
+          aria-label="Beeline Services technician completing a heat pump water heater installation"
+          style="max-height: 400px; width: 100%; object-fit: cover; border-radius: 10px">
+          <source src="img/home/hvac-row-video.webm" type="video/webm" />
+          <source src="img/home/hvac-row-video.mp4" type="video/mp4" />
+        </video>
       </div>
       <div class="text">
         <h2>HVAC Comfort Solutions</h2>
@@ -595,9 +617,18 @@
     <!-- Row 4 -->
     <section class="section">
       <div class="image">
-        <img
-          src="img/emergencyservices.webp"
-          alt="Emergency service when you need it" />
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="none"
+          poster="img/emergencyservices.webp"
+          aria-label="Beeline Services technician completing an emergency water heater installation"
+          style="max-height: 400px; width: 100%; object-fit: cover; border-radius: 10px">
+          <source src="img/home/emergency-row-video.webm" type="video/webm" />
+          <source src="img/home/emergency-row-video.mp4" type="video/mp4" />
+        </video>
       </div>
       <div class="text">
         <h2>Emergency Service When You Need It</h2>
@@ -1121,5 +1152,38 @@
   </script>
   <a class="sticky-financing-btn" href="https://app.gethearth.com/partners/beeline-services/arthur" target="_blank" rel="noopener noreferrer" aria-label="Check financing options">FINANCING</a>
   <a class="sticky-call-btn" href="tel:+14083945855" aria-label="Call now">CALL NOW</a>
+  <script id="rotating-loop-videos">
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("video[data-playlist]").forEach((video) => {
+        const sourceWebm = video.querySelector('source[type="video/webm"]');
+        const sourceMp4 = video.querySelector('source[type="video/mp4"]');
+
+        let playlist;
+        try {
+          playlist = JSON.parse(video.dataset.playlist);
+        } catch (e) {
+          return;
+        }
+        if (!Array.isArray(playlist) || !playlist.length) return;
+
+        // Index 0 is the clip already loaded in the <source> tags above.
+        playlist.unshift({
+          webm: sourceWebm ? sourceWebm.getAttribute("src") : null,
+          mp4: sourceMp4 ? sourceMp4.getAttribute("src") : null,
+        });
+
+        let current = 0;
+
+        video.addEventListener("ended", () => {
+          current = (current + 1) % playlist.length;
+          const next = playlist[current];
+          if (sourceWebm && next.webm) sourceWebm.src = next.webm;
+          if (sourceMp4 && next.mp4) sourceMp4.src = next.mp4;
+          video.load();
+          video.play().catch(() => {});
+        });
+      });
+    });
+  </script>
 </body>
 </html>
