@@ -345,7 +345,6 @@
       <div class="image" style="flex: 0 0 53%; max-width: 540px">
         <video
           id="hero-loop-video"
-          autoplay
           muted
           playsinline
           preload="none"
@@ -529,7 +528,6 @@
       <div class="image">
         <video
           id="plumbing-row-loop-video"
-          autoplay
           muted
           playsinline
           preload="none"
@@ -561,7 +559,6 @@
       <div class="image">
         <video
           id="electrical-row-loop-video"
-          autoplay
           muted
           playsinline
           preload="none"
@@ -591,7 +588,6 @@
     <section class="section">
       <div class="image">
         <video
-          autoplay
           muted
           loop
           playsinline
@@ -618,7 +614,6 @@
     <section class="section">
       <div class="image">
         <video
-          autoplay
           muted
           loop
           playsinline
@@ -1159,6 +1154,35 @@
           video.play().catch(() => {});
         });
       });
+    });
+  </script>
+  <script id="lazy-play-videos">
+    document.addEventListener("DOMContentLoaded", () => {
+      const videos = document.querySelectorAll("video");
+      if (!videos.length) return;
+
+      if (!("IntersectionObserver" in window)) {
+        // Fallback for very old browsers: just play everything once.
+        videos.forEach((v) => v.play().catch(() => {}));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+              if (video.readyState === 0) video.load();
+              video.play().catch(() => {});
+            } else {
+              video.pause();
+            }
+          });
+        },
+        { threshold: 0.25 }
+      );
+
+      videos.forEach((video) => observer.observe(video));
     });
   </script>
 </body>
