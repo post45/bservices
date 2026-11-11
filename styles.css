@@ -1780,6 +1780,7 @@ footer {
 
   .hero {
     padding: 30px 20px !important;
+    flex-direction: column !important;
   }
 
   .home-hero {

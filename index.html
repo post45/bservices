@@ -356,7 +356,7 @@
             {"webm":"img/home/hero-video-c.webm","mp4":"img/home/hero-video-c.mp4"},
             {"webm":"img/home/hero-video-d.webm","mp4":"img/home/hero-video-d.mp4"}
           ]'
-          style="width: 100%; max-height: 580px; object-fit: cover; border-radius: 10px">
+          style="width: 100%; max-height: 580px; aspect-ratio: 640 / 688; object-fit: cover; border-radius: 10px">
           <source src="img/home/hero-video.webm" type="video/webm" />
           <source src="img/home/hero-video.mp4" type="video/mp4" />
         </video>
@@ -540,7 +540,7 @@
             {"webm":"img/home/plumbing-row-video-c.webm","mp4":"img/home/plumbing-row-video-c.mp4"},
             {"webm":"img/home/plumbing-row-video-d.webm","mp4":"img/home/plumbing-row-video-d.mp4"}
           ]'
-          style="max-height: 400px; width: 100%; object-fit: cover; border-radius: 10px">
+          style="max-height: 400px; width: 100%; aspect-ratio: 640 / 458; object-fit: cover; border-radius: 10px">
           <source src="img/home/plumbing-row-video.webm" type="video/webm" />
           <source src="img/home/plumbing-row-video.mp4" type="video/mp4" />
         </video>
@@ -571,7 +571,7 @@
             {"webm":"img/home/electrical-row-video-b.webm","mp4":"img/home/electrical-row-video-b.mp4"},
             {"webm":"img/home/electrical-row-video-c.webm","mp4":"img/home/electrical-row-video-c.mp4"}
           ]'
-          style="max-height: 400px; width: 100%; object-fit: cover; border-radius: 10px">
+          style="max-height: 400px; width: 100%; aspect-ratio: 640 / 458; object-fit: cover; border-radius: 10px">
           <source src="img/home/electrical-row-video.webm" type="video/webm" />
           <source src="img/home/electrical-row-video.mp4" type="video/mp4" />
         </video>
@@ -598,7 +598,7 @@
           preload="none"
           poster="hvac/beeline-hvac-job.jpg"
           aria-label="Beeline Services technician completing a heat pump water heater installation"
-          style="max-height: 400px; width: 100%; object-fit: cover; border-radius: 10px">
+          style="max-height: 400px; width: 100%; aspect-ratio: 640 / 458; object-fit: cover; border-radius: 10px">
           <source src="img/home/hvac-row-video.webm" type="video/webm" />
           <source src="img/home/hvac-row-video.mp4" type="video/mp4" />
         </video>
@@ -625,7 +625,7 @@
           preload="none"
           poster="img/emergencyservices.webp"
           aria-label="Beeline Services technician completing an emergency water heater installation"
-          style="max-height: 400px; width: 100%; object-fit: cover; border-radius: 10px">
+          style="max-height: 400px; width: 100%; aspect-ratio: 640 / 458; object-fit: cover; border-radius: 10px">
           <source src="img/home/emergency-row-video.webm" type="video/webm" />
           <source src="img/home/emergency-row-video.mp4" type="video/mp4" />
         </video>
@@ -709,30 +709,6 @@
       </div>
     </section>
   
-
-    <!-- JavaScript -->
-    <script>
-      const mainImage = document.getElementById("mainImage");
-      const thumbnails = document.querySelectorAll("#thumbnailRow img");
-      let currentIndex = 0;
-
-      function setMainImage(img) {
-        mainImage.src = img.src;
-        currentIndex = Array.from(thumbnails).indexOf(img);
-      }
-
-      function scrollGallery(direction) {
-        currentIndex += direction;
-        if (currentIndex < 0) currentIndex = thumbnails.length - 1;
-        if (currentIndex >= thumbnails.length) currentIndex = 0;
-        mainImage.src = thumbnails[currentIndex].src;
-      }
-
-      // Auto-scroll every 7 seconds
-      setInterval(() => {
-        scrollGallery(1);
-      }, 7000);
-    </script>
 
     
       <section class="knob-section" style="max-width: 1200px; margin: 0 auto; padding: 12px 20px 24px;">
